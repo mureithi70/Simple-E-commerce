@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samimer Poultry Farm</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <a href="#"><img src="Logo.png" class="logo" alt="Samimer Farm Logo"></a>
+    <div id="menu-icon">&#9776;</div>
+    <ul id="navbar">
+      <li><a href="#About">About</a></li>
+      <li><a href="#Shop">Shop</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- About Section -->
+  <section id="About">
+    <div class="about-slideshow"></div>
+    <div class="about-content">
+      <h2>About Samimer Poultry Farm</h2>
+      <p>Welcome to Samimer Poultry Farm — where tradition meets quality. Nestled in the heart of [your region], we are a family-run poultry farm passionate about producing fresh, organic, and ethically raised poultry products.</p>
+      <p>From free-range chickens to farm-fresh eggs, every product is nurtured with care. Join us in celebrating wholesome, farm-to-table goodness — straight from our coop to your kitchen.</p>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="Shop">
+    <div class="section-container">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="rooster.PNG" alt="Rooster">
+          <h3>Free-Range Roosters</h3>
+          <p>KSh 1,500 each</p>
+          <a class="order-btn" href="https://wa.me/254712345678?text=I'm%20interested%20in%20ordering%20Free-Range%20Roosters." target="_blank">Order via WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+          <img src="hens.PNG" alt="Hens">
+          <h3> Free-Range Hens</h3>
+          <p>KSh 1,200 each</p>
+          <a class="order-btn" href="https://wa.me/254712345678?text=I'm%20interested%20in%20ordering%20Laying%20Hens." target="_blank">Order via WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+          <img src="chicks.PNG" alt="Chicks">
+          <h3>4 month Chicks</h3>
+          <p>From KSh 200</p>
+          <a class="order-btn" href="https://wa.me/254712345678?text=I'm%20interested%20in%20ordering%20Chicks%20aged%201-4%20months." target="_blank">Order via WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+          <img src="eggs.PNG" alt="Eggs">
+          <h3>Farm-Fresh Eggs (Tray)</h3>
+          <p>KSh 450</p>
+          <a class="order-btn" href="https://wa.me/254712345678?text=I'd%20like%20to%20order%20a%20tray%20of%20eggs." target="_blank">Order via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+    <section id="Contact">
+        <div class="section-container">
+            <h2>Contact Us</h2>
+            <p>Have a question, order request, or feedback? Reach out and we’ll get back to you soon!</p>
+
+            <div class="form-wrapper">
+                <form action="https://formspree.io/f/your-form-id" method="POST">
+
+                    <div>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div><br>
+
+                    <div>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div><br>
+
+                    <div>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    </div><br>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Samimer Poultry Farm. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/254712345678" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+    <img src="whatsapp-button.png" alt="WhatsApp">
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

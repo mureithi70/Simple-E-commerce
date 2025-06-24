@@ -1,0 +1,254 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #FAF3E0;
+  color: #3E2723;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #FAF3E0;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+#menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+#navbar a {
+  color: #3E2723;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border: 2px solid #3E2723;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+#navbar a:hover {
+  background: #FBC02D;
+  border-color: #FBC02D;
+}
+
+/* About Slideshow (full width) */
+#About {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.about-slideshow {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  animation: slideshow 20s infinite ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slideshow {
+  0%   { background-image: url('rooster.PNG'); }
+  25%  { background-image: url('hens.PNG'); }
+  50%  { background-image: url('chicks.PNG'); }
+  75%  { background-image: url('eggs.PNG'); }
+  100% { background-image: url('rooster.PNG'); }
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  background: rgba(255,255,255,0.9);
+  padding: 30px;
+  border-radius: 20px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Section Container (Shop & Contact) */
+.section-container {
+  max-width: 100em;
+  margin: 0 auto;
+  padding: 60px 5%;
+}
+
+.section-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section-container p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.product-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  color: #3E2723;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.order-btn {
+  display: inline-block;
+  padding: 14px 24px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+  background: #1EBE53;
+}
+
+/* Contact Form */
+.form-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+form button {
+  padding: 14px 24px;
+  background: #FBC02D;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: #FFD54F;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #FAF3E0;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  #header {
+    flex-wrap: wrap;
+  }
+  #navbar {
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+  }
+  #navbar.active {
+    display: flex;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
+}
